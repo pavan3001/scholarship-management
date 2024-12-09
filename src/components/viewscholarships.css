@@ -1,0 +1,382 @@
+/* viewapplications.css */
+
+.view-applications {
+    padding: 60px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Error message */
+.error {
+    color: #dc3545;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+.applications-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.applications-table th,
+.applications-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.applications-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.applications-table td {
+    background-color: #f9f9f9;
+}
+
+.applications-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Approve and Reject Buttons */
+.button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+.approve-btn {
+    background-color: #28a745; /* Green for Approve */
+    color: rgb(90, 214, 2);
+}
+
+.reject-btn {
+    background-color: #dc3545; /* Red for Reject */
+    color: rgb(255, 4, 4);
+}
+
+.approve-btn:disabled,
+.reject-btn:disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+}
+
+.approve-btn:hover:not(:disabled),
+.reject-btn:hover:not(:disabled) {
+    opacity: 0.8;
+}
+
+.approve-btn:focus,
+.reject-btn:focus {
+    outline: none;
+}
+
+/* Table Empty State */
+.applications-table td[colspan="5"] {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .applications-table th,
+    .applications-table td {
+        padding: 8px;
+    }
+
+    .button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+/* Approve and Reject Buttons */
+.button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 5px;
+    transition: none; /* Ensure no transition is applied */
+}
+
+.approve-btn {
+    background-color: #4CAF50; /* Green for Approve */
+    color: white;
+}
+
+.reject-btn {
+    background-color: #f44336; /* Red for Reject */
+    color: white;
+}
+
+.approve-btn:disabled,
+.reject-btn:disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+}
+
+/* Remove hover and focus effects */
+.approve-btn:hover,
+.reject-btn:hover,
+.approve-btn:focus,
+.reject-btn:focus {
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+}
+.view-scholarships {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px; /* Maximum width for larger screens */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table Styles */
+.scholarships-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.scholarships-table th,
+.scholarships-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.scholarships-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.scholarships-table td {
+    background-color: #f9f9f9;
+}
+
+.scholarships-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button Styles */
+.button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red for Delete */
+    color: white;
+}
+
+.delete-btn:disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+}
+
+.delete-btn:hover:not(:disabled) {
+    opacity: 0.8;
+}
+
+.delete-btn:focus {
+    outline: none;
+}
+
+/* Table Empty State */
+.scholarships-table td[colspan="4"] {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .scholarships-table th,
+    .scholarships-table td {
+        padding: 8px;
+    }
+
+    .button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+.view-scholarships {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 1px solid #ddd; /* Border around the container */
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table Styles */
+.scholarships-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: left;
+    border: 1px solid #ddd; /* Border around the table */
+}
+
+.scholarships-table th,
+.scholarships-table td {
+    padding: 12px;
+    border: 1px solid #ddd; /* Border around each cell */
+}
+
+.scholarships-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.scholarships-table td {
+    background-color: #f9f9f9;
+}
+
+.scholarships-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button Styles */
+.button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red for Delete */
+    color: white;
+}
+
+.delete-btn:disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+}
+
+.delete-btn:hover:not(:disabled) {
+    opacity: 0.8;
+}
+
+.delete-btn:focus {
+    outline: none;
+}
+
+/* Table Empty State */
+.scholarships-table td[colspan="4"] {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .scholarships-table th,
+    .scholarships-table td {
+        padding: 8px;
+    }
+
+    .button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

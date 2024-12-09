@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap');
+
+/* General styles for the admin login page */
+.admin-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    background-color: #0d1117; /* Dark background for hacker theme */
+    font-family: 'Roboto', sans-serif; /* Font family */
+}
+
+/* Login container styling */
+.login-container {
+    background-color: #161b22; /* Dark grey background for contrast */
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Deep shadow for depth */
+    padding: 40px;
+    max-width: 400px; /* Max width for the container */
+    width: 90%; /* Responsive width */
+    text-align: center; /* Center text */
+}
+
+/* Heading styles */
+.login-container h2 {
+    color: #ffffff; /* White text for heading */
+    margin-bottom: 20px; /* Space below heading */
+    font-size: 28px; /* Heading size */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+/* Labels for input fields */
+.form-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px; /* Space below label */
+    color: #c9d1d9; /* Light grey for labels */
+}
+
+/* Input fields styling */
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%; /* Full width input fields */
+    padding: 12px 15px; /* Padding inside input fields */
+    border: 1px solid #444c56; /* Dark border color */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Input font size */
+    color: #ffffff; /* White text color for inputs */
+    background-color: #21262d; /* Dark background for inputs */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Focused input fields styles */
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #58a6ff; /* Light blue border on focus */
+    outline: none; /* Remove default outline on focus */
+}
+
+/* Button styles */
+.button {
+    width: 100%; /* Full width button */
+    padding: 12px;
+    background-color: #58a6ff; /* Bright blue button color */
+    color: white; /* White text color on button */
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+   background-color:#0056b3; /* Darker blue on hover */ 
+}
+
+/* Error message styling */
+.error-message {
+   color: #ff4d4f; /* Red color for error messages */
+   margin-top: 10px;
+   font-size: 14px;
+}
+
+/* Responsive design adjustments for smaller screens */
+@media (max-width: 500px) {
+   .login-container {
+       padding: 20px;
+       width: calc(100% - 40px);
+       max-width:none;
+   }
+
+   .login-container h2 {
+       font-size: 24px;
+   }
+
+   .form-group input {
+       padding:auto;
+       font-size:auto;
+   }
+
+   .button {
+       font-size:auto;
+       padding:auto;
+   }
+}
+

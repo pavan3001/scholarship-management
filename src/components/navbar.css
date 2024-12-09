@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Navbar container with blur effect */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(163, 118, 77, 0.8); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 445890x 4444px 666666px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif; /* Updated font */
+}
+
+/* Logo and title */
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .navbar-logo {
+    height: 50px;
+    margin-right: 12px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)); /* Adds depth */
+}
+
+.navbar h2 {
+    color: #e6e8eb; /* Dark text for contrast */
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar h2:hover {
+    color: #ffffff; /* White on hover for contrast */
+}
+
+/* Navbar links */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 25px; /* Even spacing between links */
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #dfdad1; /* Dark color for links */
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #4f7942; /* Olive-green background on hover */
+    color: #e7e7e7; /* White text on hover */
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Underline effect on hover */
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 2px;
+    background-color: #3498db; /* Accent color for underline */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+   .navbar {
+       flex-direction: column; 
+       align-items:flex-start; 
+       padding :20 px ; 
+   }
+
+   .navbar h2 {
+       font-size :20 px ; 
+   }
+
+   .navbar ul {
+       flex-direction :column ; 
+       width :100%; 
+       margin-top :15 px ; 
+       gap :10 px; /* Adjust spacing for vertical alignment */
+   }
+
+   .navbar ul li {
+       text-align:left; 
+       width :100%; 
+   }
+
+   .navbar ul li a {
+       padding :12 px ; 
+       width :100%; 
+       border-radius :6 px ; 
+   }
+}
+
+/* Nav button for About Us link hover */
+.nav-button:hover {
+   background-color:#3498db; 
+   color:#ffffff; 
+   padding :10 px ; 
+   border-radius :6 px ; 
+   transition :all .3 s ease; 
+}

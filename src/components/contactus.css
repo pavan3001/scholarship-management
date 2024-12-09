@@ -1,0 +1,212 @@
+/* Container for the Contact Us page */
+.contactus {
+    background-color: #f0f0f0; /* Light gray background for the whole section */
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Main contact container */
+.contactus-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading styles */
+.contactus-container h2 {
+    font-size: 2.8rem;
+    color: #2c3e50; /* Dark blue-gray */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Paragraph styles */
+.contactus-container p {
+    font-size: 1.2rem;
+    color: #7f8c8d; /* Soft gray */
+    margin-bottom: 30px;
+}
+
+/* Contact information styling */
+.contact-info {
+    font-size: 1.2rem;
+    color: #34495e; /* Darker shade for the text */
+    background-color: #ecf0f1; /* Light grayish background */
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #e67e22; /* Orange color for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #d35400; /* Darker shade of orange on hover */
+}
+
+/* Contact form styling */
+.contact-form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: #2c3e50; /* Dark blue-gray for labels */
+    margin-bottom: 5px;
+}
+
+/* Input and textarea styling */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #bdc3c7; /* Light border */
+    border-radius: 6px;
+    background-color: #ecf0f1; /* Soft background for inputs */
+    color: #34495e; /* Dark text color */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db; /* Blue border on focus */
+    background-color: #ffffff; /* White background on focus */
+}
+
+/* Submit button styling */
+.submit-button {
+    background-color: #e67e22; /* Orange background */
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #d35400; /* Darker orange on hover */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .contactus-container {
+        padding: 20px;
+    }
+
+    .contactus-container h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact-info {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .submit-button {
+        font-size: 1rem;
+        padding: 10px 16px;
+    }
+}
+.alert-message {
+  margin-top: 20px;
+  padding: 15px;
+  color: #155724; /* Success green text */
+  background-color: #d4edda; /* Light green background */
+  border: 1px solid #c3e6cb; /* Green border */
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.popup-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content p {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.popup-close {
+    background-color: #e74c3c; /* Red background */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.popup-close:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

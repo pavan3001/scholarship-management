@@ -1,0 +1,221 @@
+/* General reset and body styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* HomePage layout */
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Adjust to space out content */
+    min-height: 100vh; /* Ensures full viewport height */
+    background-color: #51876c; /* Fallback color */
+    background-image: url('../assets/bg3.jpg'); /* Replace with your image URL */
+    background-size: auto; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    
+    padding: 250px;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Content section with new card design and animation */
+.content {
+    text-align: center;
+    padding: 40px;
+    background-color: #b47934de; /* Soft gradient */
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-bottom: 40px; /* Adding fade-in, lift-up, and disco animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.content h2 {
+    font-size: 36px;
+    color: #131313; /* Dark slate for heading */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgb(253, 252, 252); /* Muted gray text for paragraph */
+}
+
+/* About Us section with card-like design and animation */
+#aboutus {
+    padding: 60px 0;
+    background: linear-gradient(145deg, #ffffff, #e8f4fa);
+    border-radius: 16px;
+    box-shadow: 880 88px 25px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-out, liftUp 0.3s ease-out, discoColors 5s infinite alternate; /* Adding disco colors animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#aboutus:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+#aboutus h2 {
+    font-size: 32px;
+    color: #2d3436;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#aboutus p {
+    font-size: 18px;
+    color: #636e72;
+    line-height: 1.8;
+}
+
+/* Button Styles */
+.button {
+    padding: 14px 20px;
+    background-color: #0984e3; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #74b9ff; /* Lighter blue on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 10px;
+    }
+
+    .content h2 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    #aboutus h2 {
+        font-size: 28px;
+    }
+
+    #aboutus p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .content h2 {
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    #aboutus h2 {
+        font-size: 24px;
+    }
+
+    #aboutus p {
+        font-size: 14px;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes liftUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes discoColors {
+    0% {
+        background-color: #0984e3;
+    }
+    50% {
+        background-color: #74b9ff;
+    }
+    100% {
+        background-color: #0984e3;
+    }
+}
+/* HomePage layout */
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Adjust to space out content */
+    min-height: 100vh; /* Ensures full viewport height */
+    background-color: #51876c; /* Light gray background */
+    padding: 310px;
+}
+
+/* About Us section with card-like design and animation */
+#aboutus {
+    padding: 60px 0;
+    background: linear-gradient(145deg, #ffffff, #e8f4fa);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto 0 auto; /* No margin on top, push it to the bottom */
+    animation: fadeIn 1s ease-out, liftUp 0.3s ease-out, discoColors 5s infinite alternate;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add more space between homepage content and "About Us" */
+.homepage > .content-wrapper {
+    margin-bottom: 400px; /* Adjust the bottom margin to create more space */
+}

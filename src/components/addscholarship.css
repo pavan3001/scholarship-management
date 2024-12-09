@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* General container styles */
+.addscholarshipcontainer {
+    margin: 0 auto 12vh; /* Center the container */
+    max-width: 600px; /* Increased max width for better layout */
+    padding: 40px;
+    background-color: #34495e; /* Darker background color */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Unique font family */
+}
+
+/* Container background with a smoother image */
+.add-scholarship {
+    background-image: url('../assets/bg.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+/* Heading styles */
+.addscholarshipcontainer h2 {
+    color: #ffffff; /* White text for contrast */
+    margin-bottom: 20px;
+    font-size: 36px; /* Increased size for prominence */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form labels */
+form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px; /* Reduced space for a tighter layout */
+    color: #ecf0f1; /* Light grey for labels */
+    font-size: 16px; /* Increased font size for better readability */
+    font-weight: 600;
+}
+
+/* Form input fields styling */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="url"],
+textarea {
+    width: 100%; /* Full width input fields */
+    padding: 14px 16px; /* Padding inside input fields */
+    margin-bottom: 18px; /* Space between inputs */
+    border: 1px solid #bdc3c7; /* Light border color */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Input font size */
+    color: #2c3e50; /* Dark text color for inputs */
+    background-color: #ecf0f1; /* Light grey background for inputs */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Select dropdown styling */
+select {
+    width: 100%; 
+    padding: 14px 16px; 
+    margin-bottom: 18px; 
+    border: 1px solid #bdc3c7; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    background-color: #ecf0f1; 
+}
+
+/* Focused input fields styles */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #e67e22; /* Highlight border on focus with scholarship theme color */
+    outline: none; /* Remove default outline on focus */
+    box-shadow: 0 0 5px rgba(231, 126, 34, 0.5); /* Subtle glow effect on focus */
+}
+
+/* Submit button styles */
+.button {
+    width: 100%; 
+    padding: 14px; 
+    background-color: #e67e22; 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+.button:hover {
+   background-color:#d35400; /* Darker orange on hover */ 
+   transform: scale(1.05); /* Slight scaling effect on hover */ 
+   transition-duration: .3s;
+}
+
+/* Error message styling (if needed) */
+.error-message {
+   color: #ff4d4f; /* Red color for error messages */
+   margin-top: 10px;
+   font-size: 14px;
+}
+
+/* Responsive styling adjustments for smaller screens */
+@media (max-width: 768px) {
+   .addscholarshipcontainer {
+       margin-left:auto;
+       margin-right:auto;
+       padding-left :20 px;
+       padding-right :20 px;
+   }
+
+   h2 {
+       font-size :28 px ; 
+   }
+
+   .button {
+       font-size :16 px ; 
+   }
+
+   input[type="text"],
+   input[type="number"],
+   input[type="date"],
+   input[type="url"],
+   textarea,
+   select {
+       font-size :14 px ; 
+   }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #2c3e50;
+  --accent-color: #f39c12;
+  --background-start: #2193b0;
+  --background-end: #6dd5ed;
+  --text-color: #333;
+  --light-text: #ffffff;
+  --input-bg: rgba(255, 255, 255, 0.9);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.add-scholarship {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--background-start), var(--background-end));
+  background-attachment: fixed;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.addscholarshipcontainer {
+  max-width: 800px;
+  width: 100%;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.addscholarshipcontainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+}
+
+.addscholarshipcontainer h2 {
+  color: var(--secondary-color);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.addscholarshipcontainer h2::after {
+  content: '🎓';
+  font-size: 24px;
+  position: absolute;
+  margin-left: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+form {
+  display: grid;
+  gap: 25px;
+}
+
+.form-group {
+  position: relative;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  color: var(--secondary-color);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="url"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--input-bg);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  font-size: 16px;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+  transform: translateY(-2px);
+}
+
+.button {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  color: var(--light-text);
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+}
+
+.button:active {
+  transform: translateY(-1px);
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+  .addscholarshipcontainer {
+    padding: 30px 20px;
+  }
+
+  .addscholarshipcontainer h2 {
+    font-size: 24px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  input[type="url"],
+  textarea,
+  select {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+/* Animation for form elements */
+.form-group {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+.form-group:nth-child(4) { animation-delay: 0.4s; }
+.form-group:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* General container styles */
+.addscholarshipcontainer {
+    margin: 0 auto 12vh; /* Center the container */
+    max-width: 600px; /* Increased max width for better layout */
+    padding: 40px;
+    background-color: #ffffff; /* White background for a clean look */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Unique font family */
+}
+
+/* Container background with a smoother image */
+.add-scholarship {
+    background-image: url('../assets/bg.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+/* Heading styles */
+.addscholarshipcontainer h2 {
+    color: #2c3e50; /* Dark text for contrast */
+    margin-bottom: 20px;
+    font-size: 36px; /* Increased size for prominence */
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Form labels */
+form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px; /* Reduced space for a tighter layout */
+    color: #34495e; /* Darker grey for labels */
+    font-size: 16px; /* Increased font size for better readability */
+    font-weight: 600;
+}
+
+/* Form input fields styling */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="url"],
+textarea {
+    width: 100%; /* Full width input fields */
+    padding: 14px 16px; /* Padding inside input fields */
+    margin-bottom: 18px; /* Space between inputs */
+    border: 1px solid #bdc3c7; /* Light border color */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Input font size */
+    color: #2c3e50; /* Dark text color for inputs */
+    background-color: #f9f9f9; /* Light grey background for inputs */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Select dropdown styling */
+select {
+    width: 100%; 
+    padding: 14px 16px; 
+    margin-bottom: 18px; 
+    border: 1px solid #bdc3c7; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    background-color: #f9f9f9; 
+}
+
+/* Focused input fields styles */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #e67e22; /* Highlight border on focus with theme color */
+    outline: none; /* Remove default outline on focus */
+    box-shadow: 0 0 5px rgba(231, 126, 34, 0.5); /* Subtle glow effect on focus */
+}
+
+/* Submit button styles */
+.button {
+    width: 100%; 
+    padding: 14px; 
+    background-color: #e67e22; 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: 18px; 
+    font-weight: bold; 
+}
+
+.button:hover {
+   background-color:#d35400; /* Darker orange on hover */ 
+   transform: scale(1.05); /* Slight scaling effect on hover */ 
+   transition-duration:.3s;
+}
+
+/* Error message styling (if needed) */
+.error-message {
+   color: #ff4d4f; /* Red color for error messages */
+   margin-top: 10px;
+   font-size: 14px;
+}
+
+/* Responsive styling adjustments for smaller screens */
+@media (max-width: 768px) {
+   .addscholarshipcontainer {
+       margin-left:auto;
+       margin-right:auto;
+       padding-left :20px;
+       padding-right :20px;
+   }
+
+   h2 {
+       font-size :28px ; 
+   }
+
+   .button {
+       font-size :16px ; 
+   }
+
+   input[type="text"],
+   input[type="number"],
+   input[type="date"],
+   input[type="url"],
+   textarea,
+   select {
+       font-size :14px ; 
+   }
+}
